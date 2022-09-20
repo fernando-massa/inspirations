@@ -67,7 +67,7 @@ class InspirationCreate(CreateView): # to add LoginRequiredMixin later
     # fields = '__all__'
     fields = ['name', 'description', 'url', 'description', 'link']
         # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
-
+    
     # def form_valid(self, form):
     #     # self.request.user means current logged in user
     #     form.instance.user = self.request.user
