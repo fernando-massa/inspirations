@@ -2,10 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-path('', views.home, name='home'),
-path('galleries/', views.gallery_index, name='index'),
-
-
+    path('', views.home, name='home'),
 # ------------------Inspiration----------------------------------------------
     
     # show all the inspirations added
@@ -32,6 +29,6 @@ path('galleries/', views.gallery_index, name='index'),
 
 # ------------------Sign up-------------------------------------------------
 
-path('accounts/signup/', views.signup, name='signup'),
+    path('accounts/signup/', views.signup, name='signup'),
 
 ]
