@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import environ
-environ.Env()
+env = environ.Env()
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,8 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = env('SECRET_KEY')
-SECRET_KEY='django-insecure-@f&+4%rf$#i)1dm6i=2si7_ag+t(gy-j2h19)p==!@!4k&zcrp'
+
+SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY='django-insecure-@f&+4%rf$#i)1dm6i=2si7_ag+t(gy-j2h19)p==!@!4k&zcrp'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -93,11 +94,11 @@ WSGI_APPLICATION = 'inspiration2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'inspirations',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': 5432
+        'NAME': env('NAME'),
+        'USER': env('USER'),
+        'PASSWORD': env('PASSWORD'),
+        'HOST': env('HOST'),
+        'PORT': env('PORT')
     }
 }
 
