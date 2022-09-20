@@ -49,10 +49,11 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 ---
 
 ## Wins
-- lorum ipsum
+- Getting everyone on the same page with working code and Repo.
 
 ## Hurdles
-- lorum ipsum
+- Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
+- 
 
 ## Future features
 
