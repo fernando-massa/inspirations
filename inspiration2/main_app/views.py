@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
 from django.shortcuts import render, redirect
-from .models import Gallery
+from .models import Gallery, Inspiration, Note
 #from .forms import FeedingForm
 from django.http import HttpResponse
 
@@ -26,6 +26,67 @@ import uuid
 def home(request):
     return render(request, "home.html")
 
+# -----------------Inspiration----------------------------------------------
+
+# show all the inspirations in the index page
+# http://localhost:8000/inspirations
+def inspiration_index(request):
+    inspirations = Inspiration.objects.filter(user=request.user)
+    return render(request, 'inspirations/index.html', {'inspirations': inspirations})
+
+
+# to see the inspiration detail
+# http://localhost:8000/inspirations/1/
+def inspirations_detail(request, inspiration_id):
+    inspiration = Inspiration.objects.get(id=inspiration_id)
+    return render(
+        request,
+        'inspirations/detail.html',
+        {'inspiration': inspiration}
+    )
+
+
+# create inspiration
+# http://localhost:8000/inspirations/create/
+class InspirationCreate(CreateView): # to add LoginRequiredMixin later
+    model = Inspiration
+    # fields = '__all__'
+    fields = ['name', 'description', 'url', 'description', 'link']
+        # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
+
+    # def form_valid(self, form):
+    #     # self.request.user means current logged in user
+    #     form.instance.user = self.request.user
+    #     return super().form_valid(form)
+
+    def get_success_url(self, **kwargs):
+        # self.object.id = 9
+        # http://127.0.0.1:8000/inspirations/9
+        # path('inspirations/<int:gallery_id>/', views.inspirations_detail, name='detail'),
+        return reverse('detail', args=(self.object.id,))
+
+
+# create gallery
+# http://localhost:8000/inspirations/create/
+class InspirationUpdate(UpdateView): # to add LoginRequiredMixin later
+    model = Inspiration
+    # fields = '__all__'
+    fields = ['description', 'url', 'description', 'link']
+
+    def get_success_url(self, **kwargs):
+        # self.object.id = 9
+        # http://127.0.0.1:8000/inspirations/9
+        # path('inspirations/<int:gallery_id>/', views.inspirations_detail, name='detail'),
+        return reverse('detail', args=(self.object.id,))
+
+
+class InspirationDelete(DeleteView): # to add LoginRequiredMixin later
+    model = Gallery
+    success_url = '/inspirations/'
+
+
+# -----------------Gallery---------------------------------------------------
+
 def gallery_index(request):
     # select * from table_name
     #cats = Cat.objects.all()  # this will return a list of cats
@@ -39,11 +100,6 @@ def gallery_index(request):
     #return render(request, 'cats/index.html', {'cats': cats})
     #return HttpResponse('<h1>gallery test</h1>')
     return render(request, 'galleries/index.html')
-  
-  
-def inspiration_index(request):
-    return HttpResponse('<h1>inspirations test</h1>')
-
 
 
 def add_photo(request, inspiration_id):

@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>My Galleries</h1>
+    <h1>My Inspiration</h1>
 
-    <!-- {% for gallery in galleries %}
-        <a href="{% url 'detail' gallery.id %}">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">{{ gallery.name }}</span>
-                    <p>{{ gallery.description }}</p>
-                    <p>Description: {{ cat.description }}</p>
+    {% for inspiration in inspirations %}
+        <a href="{% url 'detail' inspiration.id %}">
+            <div id="" class="card">
+                <div id="" class="card-content">
+                    <span id="" class="card-title">{{ inspiration.name }}</span>
+                    <!-- <p>{{ inspiration.description }}</p> -->
+                    <p>Description: {{ inspiration.description }}</p>
                 </div>
             </div>
         </a>
 
-    {% endfor %} -->
+    {% endfor %}
 
 {% endblock %}
