@@ -20,11 +20,11 @@ import uuid
 
 
 # Define the home view
-def home(request):
-  return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟ\ﾉ</h1>')
-
 # def home(request):
-#     return render(request, "home.html")
+#   return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟ\ﾉ</h1>')
+
+def home(request):
+    return render(request, "home.html")
 
 def gallery_index(request):
     # select * from table_name
