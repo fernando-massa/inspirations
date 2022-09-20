@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impressions</title>
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> {% endcomment %}
+</head>
+<body>
+<header class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Inspirations</a></li>
+            </ul>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'login' %}">Log In</a></li>
+            <ul class="right">
+                    {% comment %} <li><a href="{% url 'galleries_create' %}">Add a Gallery</a></li> {% endcomment %}
+                    
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+<footer class="page-footer">
+    
+</footer>
+</body>
+</html>
+
