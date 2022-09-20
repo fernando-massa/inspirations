@@ -25,7 +25,7 @@ import uuid
 
 def home(request):
     return render(request, "home.html")
-    
+
 # -----------------Notes---------------------------------------------------
 def add_note(request, inspiration_id):
     # print(request.POST['date'])
