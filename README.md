@@ -4,13 +4,13 @@ Inspiration is a Pinterest-inspired app. Users can organize images and links of 
 
 ![Our Team](https://imgur.com/KNrvJVa.png)
 
-| Developer | Role |
-| ------ | ------ |
-| [Emily Aikens](https://github.com/emilyaikens) | Design. IU/UX |
-| [Beverly Nguyen](https://github.com/heyitsmebev) | Database Manager |
-| [Fernando Massambani](https://github.com/fernando-massa) | Github Manager |
-| [Brianna Dukes](https://github.com/BDukesuwu) | Documenter |
-| [Patrick Tien](https://github.com/CPTien) | SCRUM Master |
+| Developer | Role | Description |
+| ------ | ------ | ------ |
+| [Emily Aikens](https://github.com/emilyaikens) | Designer | In charge of UI design/layout (wireframes) and styling |
+| [Beverly Nguyen](https://github.com/heyitsmebev) | Database Manager | Creates and manages the models. |
+| [Fernando Massambani](https://github.com/fernando-massa) | Github Manager | "Owns"/manages the repo and GitHub team workflow (merging pull requests, etc.) |
+| [Brianna Dukes](https://github.com/BDukesuwu) | Documenter | In charge of the README, etc |
+| [Patrick Tien](https://github.com/CPTien) | SCRUM Master | Leader of the Agile processes (User Stories, Stand-Ups, etc.) and manager of Trello. |
 ---
 
 ![User Stories](https://imgur.com/A5O2hpU.png)
@@ -49,10 +49,11 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 ---
 
 ## Wins
-- lorum ipsum
+- Getting everyone on the same page with working code and Repo.
 
 ## Hurdles
-- lorum ipsum
+- Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
+- 
 
 ## Future features
 
