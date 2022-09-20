@@ -1,0 +1,16 @@
+{% block content %}
+
+    <h1>Gallery List</h1>
+
+    {% for gallery in gallery_list %}
+        <a href="{% url 'galleries_detail' gallery.id %}">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">{{ gallery.name }}</span>
+                    <span class="card-title">{{ gallery.description }}</span>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+
+{% endblock %}
