@@ -87,19 +87,31 @@ class InspirationDelete(DeleteView): # to add LoginRequiredMixin later
 
 # -----------------Gallery---------------------------------------------------
 
-def gallery_index(request):
-    # select * from table_name
-    #cats = Cat.objects.all()  # this will return a list of cats
-    
-    #SELECT, name, age .... FROM cats WHERE user_id = id
-    # cats = Cat.objects.filter(user=request.user)
-    # #request.user comes from signup function: 
-    # # user = form.save()
-    # # login(request, user) 
-    
-    #return render(request, 'cats/index.html', {'cats': cats})
-    #return HttpResponse('<h1>gallery test</h1>')
-    return render(request, 'galleries/index.html')
+# http://localhost:8000/galleries/
+class GalleryList(ListView):
+    model = Gallery
+
+# http://localhost:8000/galleries/1/
+class GalleryDetail(DetailView):
+    model = Gallery
+
+
+# http://localhost:8000/galleries/create/
+class GalleryCreate(CreateView):
+    model = Gallery
+    fields = '__all__'
+
+
+# http://localhost:8000/galleries/1/update/
+class GalleryUpdate(UpdateView):
+    model = Gallery
+    fields = fields = '__all__'
+
+
+# http://localhost:8000/galleries/1/delete/
+class GalleryDelete(DeleteView):
+    model = Gallery
+    success_url = '/galleries/'
 
 
 def add_photo(request, inspiration_id):
