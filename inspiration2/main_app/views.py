@@ -25,6 +25,20 @@ import uuid
 
 def home(request):
     return render(request, "home.html")
+    
+# -----------------Notes---------------------------------------------------
+def add_note(request, inspiration_id):
+    # print(request.POST['date'])
+    # print(request.POST['meal'])
+    # print(request.POST['csrfmiddlewaretoken'])
+    form = NoteForm(request.POST)
+    if form.is_valid():
+        # commit=False because we need to assign a cat id
+        new_note = form.save(commit=False)
+        new_note.inspiration_id = inspiration_id
+        print(new_note)
+        new_note.save()
+    return redirect('detail', inspiration_id=inspiration_id)
 
 # -----------------Inspiration----------------------------------------------
 
