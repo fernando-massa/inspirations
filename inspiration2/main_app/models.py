@@ -14,7 +14,10 @@ class Gallery(models.Model):  # IS A
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.description}"
+
+    def get_absolute_url(self):
+        return reverse('galleries_detail', kwargs={'pk': self.id})
 
 class Inspiration(models.Model):
     name = models.CharField(max_length=500)
