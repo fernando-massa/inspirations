@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+# Configure Django App for Heroku.
+import django_on_heroku
+
 from pathlib import Path
 import environ
 env = environ.Env()
@@ -150,3 +153,6 @@ LOGIN_REDIRECT_URL = '/inspirations/'
 
 # Add this variable to specify where logging out redirects to
 LOGOUT_REDIRECT_URL = '/'
+
+# Configure Django App for Heroku.
+django_on_heroku.settings(locals())
