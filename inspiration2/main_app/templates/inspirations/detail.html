@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Gallery Details</h1>
-    <div>{{ gallery.name }}</div>
-    <div>will insert inspirations here</div>
+    <h1>Inspiration Details</h1>
+    <div>{{ inspiration.name }}</div>
+    <div>will insert gallery here (later)</div>
+    <!-- add the delete and update function below -->
+    <div id="" class="card-action">
+        <a id="" href="{% url 'inspirations_update' inspiration.id %}">Edit</a>
+        <a id="" href="{% url 'inspirations_delete' inspiration.id %}">Delete</a>
+    </div>
     
 
 {% endblock %}
