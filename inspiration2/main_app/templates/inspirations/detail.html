@@ -36,6 +36,44 @@
 {% endfor %}
 <br>
 <br>
+
+<!-- Add notes form below-->
+<h2> Add a Note </h2>
+    <hr>
+<div class="">
+    <form action="{% url 'add_note' inspiration.id %}" method="POST">
+        {% csrf_token %}
+        {{ note_form.as_p }}
+        <input type="submit" class="btn" value="Add Note">
+    </form>
+
+    <table class="">
+        <thead>
+            <hr>
+            <h4> Notes </h4>
+        <tr>
+            <th>Date</th>
+            <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for note in inspiration.note_set.all %}
+            <tr>
+                <td>{{ note.date }}</td>
+                <td>{{ note.note }}</td>
+            </tr>
+
+            <tr>
+               <!-- <td> <a id="" href="{% url 'inspirations_update' inspiration.id %}">Edit</a> </td>-->
+                <!-- <td> <a id="" href="{% url 'inspirations_delete' inspiration.id %}">Delete</a> </td>-->
+            </tr>
+                {% empty %}
+                    <h5>No Notes yet </h5>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
 <hr class="mt-2">
 
 <a id="" href="{% url 'inspirations_update' inspiration.id %}">
