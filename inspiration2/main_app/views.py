@@ -1,8 +1,12 @@
+import os
+import boto3
+import uuid
+
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
 from django.shortcuts import render, redirect
-from .models import Gallery, Inspiration, Note
+from .models import Gallery, Inspiration, Note, Photo
 #from .forms import FeedingForm
 from django.http import HttpResponse
 
@@ -14,9 +18,7 @@ from django.contrib.auth.decorators import login_required
 # Import the mixin for class-based views
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-import os
-import boto3
-import uuid
+
 
 
 # Define the home view
@@ -60,18 +62,19 @@ def inspirations_detail(request, inspiration_id):
     )
 
 
+
 # create inspiration
 # http://localhost:8000/inspirations/create/
 class InspirationCreate(CreateView): # to add LoginRequiredMixin later
     model = Inspiration
     # fields = '__all__'
-    fields = ['name', 'description', 'url', 'description', 'link']
+    fields = ['name', 'description', 'link']
         # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
-    
-    # def form_valid(self, form):
-    #     # self.request.user means current logged in user
-    #     form.instance.user = self.request.user
-    #     return super().form_valid(form)
+
+    def form_valid(self, form):
+        # self.request.user means current logged in user
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
     def get_success_url(self, **kwargs):
         # self.object.id = 9
@@ -80,12 +83,45 @@ class InspirationCreate(CreateView): # to add LoginRequiredMixin later
         return reverse('detail', args=(self.object.id,))
 
 
-# create gallery
+# # create inspiration
+# # http://localhost:8000/inspirations/create/
+# class InspirationCreate(CreateView): # to add LoginRequiredMixin later
+#     model = Inspiration
+#     # fields = '__all__'
+#     fields = ['name', 'description', 'link', 'photo_file']
+#         # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
+
+#     def form_valid(self, form):
+#         photo_file = self.request.FILES.get('photo_file', None)
+
+#         if photo_file:
+#             s3 = boto3.client('s3')
+#             # need a unique "key" for S3 / needs image file extension too
+#             key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+#             # just in case something goes wrong
+#             try:
+#                 bucket = os.environ['S3_BUCKET']
+#                 s3.upload_fileobj(photo_file, bucket, key)
+#                 # build the full url string
+#                 url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+#                 # we can assign to inspiration_id or inspiration (if you have a inspiration object)
+#             except:
+#                 print('An error occurred uploading file to S3')
+
+#         form.instance.user = self.request.user
+#         form.instance.photo_file = url
+
+#         return super().form_valid(form) 
+
+
+
+
+# update inspiration 
 # http://localhost:8000/inspirations/create/
 class InspirationUpdate(UpdateView): # to add LoginRequiredMixin later
     model = Inspiration
     # fields = '__all__'
-    fields = ['description', 'url', 'description', 'link']
+    fields = ['description', 'description', 'link']
 
     def get_success_url(self, **kwargs):
         # self.object.id = 9
@@ -95,8 +131,35 @@ class InspirationUpdate(UpdateView): # to add LoginRequiredMixin later
 
 
 class InspirationDelete(DeleteView): # to add LoginRequiredMixin later
-    model = Gallery
+    model = Inspiration
     success_url = '/inspirations/'
+
+# # create inspiration's photo
+# # http://localhost:8000/inspirations/create/
+# class InspirationPhotoCreate(CreateView): # to add LoginRequiredMixin later
+#     model = Inspiration
+#     fields = "__all__"
+
+
+
+def add_photo(request, inspiration_id):
+    # photo-file will be the "name" attribute on the <input type="file">
+    photo_file = request.FILES.get('photo-file', None)
+    if photo_file:
+        s3 = boto3.client('s3')
+        # need a unique "key" for S3 / needs image file extension too
+        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+        # just in case something goes wrong
+        try:
+            bucket = os.environ['S3_BUCKET']
+            s3.upload_fileobj(photo_file, bucket, key)
+            # build the full url string
+            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+            # we can assign to inspiration_id or inspiration (if you have a inspiration object)
+            Photo.objects.create(url=url, inspiration_id=inspiration_id)
+        except:
+            print('An error occurred uploading file to S3')
+    return redirect('detail', inspiration_id=inspiration_id)
 
 
 # -----------------Gallery---------------------------------------------------
@@ -126,26 +189,6 @@ class GalleryUpdate(UpdateView):
 class GalleryDelete(DeleteView):
     model = Gallery
     success_url = '/galleries/'
-
-
-def add_photo(request, inspiration_id):
-    # photo-file will be the "name" attribute on the <input type="file">
-    photo_file = request.FILES.get('photo-file', None)
-    if photo_file:
-        s3 = boto3.client('s3')
-        # need a unique "key" for S3 / needs image file extension too
-        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
-        # just in case something goes wrong
-        try:
-            bucket = os.environ['S3_BUCKET']
-            s3.upload_fileobj(photo_file, bucket, key)
-            # build the full url string
-            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-            # we can assign to inspiration_id or inspiration (if you have a inspiration object)
-            Photo.objects.create(url=url, inspiration_id=inspiration_id)
-        except:
-            print('An error occurred uploading file to S3')
-    return redirect('detail', inspiration_id=inspiration_id)
 
 
 def some_function(request):

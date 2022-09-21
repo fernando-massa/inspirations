@@ -4,14 +4,20 @@
 
     {% for inspiration in inspirations %}
         <a href="{% url 'detail' inspiration.id %}">
-            <div id="" class="card">
+            <div id="" class="card" enctype="multipart/form-data">
                 <div id="" class="card-content">
                     <span id="" class="card-title">{{ inspiration.name }}</span>
-                    <!-- <p>{{ inspiration.description }}</p> -->
                     <p>Description: {{ inspiration.description }}</p>
+                    <!-- <p>{{ inspiration.photo_file }}</p> -->
                 </div>
             </div>
         </a>
+        {% for photo in inspiration.photo_set.all %}
+        <img class="responsive-img card-panel" src="{{photo.url}}">
+    {% empty %}
+        <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+    {% endfor %}
+    
 
     {% endfor %}
 
