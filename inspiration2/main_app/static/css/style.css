@@ -1,25 +1,27 @@
-body, html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	background: #60a3bc !important;
-}
 
-.user_card {
-	height: 400px;
-	width: 350px;
-	margin-top: auto;
-	margin-bottom: auto;
-	background: #f39c12;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border-radius: 5px;
+body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #60a3bc !important;
+            box-sizing: border-box;
+		}
+		.user_card {
+			height: 400px;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #f39c12;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
 }
 
 		.brand_logo_container {
@@ -79,4 +81,92 @@ body, html {
     .sign-up-button-container {
         text-align: center;
     }
+    /* home page */
+    .home-body{
+        margin-top: 0px;
+		background: #60a3bc !important;
+    }
+    .home_header {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .home-h1 {
+        font-size: 150px;
+        padding-bottom: 30px;
+    }
+    .home-text {
+        font-size: 25px;
+    }
+    .home_btn {
+        width: 100%;
+        max-width: 200px;
+        background: #c0392b;
+        color: white;
+        margin: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .container {
+        width: 100%;
+        margin: 2rem auto; 
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 15px;
+    }
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .gallery__item--2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .gallery__item--3 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+    }
+    .gallery__item--5 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+    .gallery__item--6 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
 
+@media only screen and (max-width: 800px) {
+    .home-h1 {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-h1 {
+        font-size: 70px;
+    }
+}
