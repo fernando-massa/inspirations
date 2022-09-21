@@ -2,16 +2,22 @@
 
 {% block content %}
 
-        <h1>Add Inspiration</h1>
-
-    <!-- Leaving the action empty makes the form post to the same url used to display it -->
-    <form action="" enctype="multipart/form-data" method="post">
-        <!-- Django requires the following for security purposes -->
-        {% csrf_token %}
-        <table>
-            <!-- Render the inputs inside of <tr>s & <td>s -->
-            {{ form.as_table }}
-        </table>
-        <input type="submit" value="Submit!" class="btn">
-    </form>
+    <div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+                <h1 class="fw-light text-center">Add Inspiration</h1>
+                <hr class="mt-2">
+				<div class="d-flex justify-content-center">
+					<form class= "mt-4" action="" enctype="multipart/form-data" method="post">
+                        <div class="form-input">{% csrf_token %}</div>
+                            {{ form.as_p }}
+                        </br>
+						<div class="d-flex justify-content-center login_container">
+                            <input type="submit" value="Create" class="btn login_btn">
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

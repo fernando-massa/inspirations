@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>My Inspiration</h1>
+    <h1>My Inspirations</h1>
 
     {% for inspiration in inspirations %}
         <a href="{% url 'detail' inspiration.id %}">
