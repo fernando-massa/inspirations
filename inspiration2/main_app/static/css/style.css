@@ -49,6 +49,7 @@ a {
     max-width: 200px;
     background: #c0392b !important;
     color: white !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .login_btn:focus {
     box-shadow: none !important;
@@ -187,6 +188,18 @@ a {
     max-width: 600px;
     margin: 0 auto;
 }
+.cancel_btn {
+    width: 100%;
+    max-width: 200px;
+    background: #f39c12;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* gallery details */
+.gallery_detail {
+    text-align: center;
+}
+
 
 @media only screen and (max-width: 800px) {
     .home-h1 {

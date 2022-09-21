@@ -3,11 +3,11 @@
   <h1>Delete Gallery</h1>
 
   <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
-
-  <form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
-    <a href="{% url 'galleries_detail' object.id %}">Cancel</a>
-    <!-- possbile error here for gallery.id, might need to be object.id -->
+  <br>
+  <form id="" action="" method="POST">
+      {% csrf_token %}
+      <input class="btn login_btn" type="submit" value="Yes - Delete!" class="btn">
+      <br><br>
+      <a href="{% url 'detail' object.id %}"><button class="btn cancel_btn">Cancel</button></a>
   </form>
 {% endblock %}

@@ -3,10 +3,13 @@
     <h1>Delete Inspiration</h1>
 
     <h4>Are you sure you want to delete <span id="" class="teal-text">{{ object.name }}</span>?</h4>
-
+    <br>
     <form id="" action="" method="POST">
         {% csrf_token %}
-        <input type="submit" value="Yes - Delete!" class="btn">
-        <a href="{% url 'detail' object.id %}">Cancel</a>
+        <input class="btn login_btn" type="submit" value="Yes - Delete!">
+        <br><br>
+        <a href="{% url 'detail' object.id %}">
+            <button class="btn cancel_btn">Cancel</button>
+        </a>
     </form>
 {% endblock %}
