@@ -82,21 +82,27 @@ body,
     }
     /* home page */
     .home-body{
-        margin: 0;
-		padding: 0;
-		height: 100%;
+        margin-top: 0px;
 		background: #60a3bc !important;
     }
     .home_header {
         text-align: center;
-        margin-top: 300px;
+        margin-top: 30px;
     }
     .home-h1 {
         font-size: 150px;
-        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .home-text {
+        font-size: 25px;
     }
     .home_btn {
+        width: 100%;
+        max-width: 200px;
+        background: #c0392b;
+        color: white;
         margin: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .container {
         width: 100%;
