@@ -177,6 +177,16 @@ a {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/* add gallery */
+.gallery-form-container{
+    padding: 20px;
+    padding-top: 100px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 @media only screen and (max-width: 800px) {
     .home-h1 {
