@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Add Gallery</h1>
-    <!-- Leaving the action empty makes the form post to the same url used to display it -->
-    <form action="" method="POST">
-        <!-- Django requires the following for security purposes -->
-        {% csrf_token %}
-        <table>
-            <!-- Render the inputs inside of <tr>s & <td>s -->
+
+<div class = "gallery-form-container">
+    <h1 class="fw-light text-center">Add/Edit Gallery</h1>
+    <hr class="mt-2">
+    <br>
+    <div class="d-flex justify-content-center align-content-center">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
             {{ form.as_table }}
-        </table>
-        <input type="submit" value="Submit!" class="btn">
-    </form>
+            </table>
+            <br><br>
+            <div class="d-flex justify-content-center login_container">
+                <input type="submit" value="Create" class="btn login_btn">
+            </div>
+            <br>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
