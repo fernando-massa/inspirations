@@ -1,32 +1,51 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Inspiration Details</h1>
-    <div>{{ inspiration.name }}</div>
-    <div>{{ inspiration.description }}</div>
-    <div>{{ inspiration.link }}</div>
-    <!-- <div>{{ inspiration.photo_file }}</div> -->
-    <br>
-    <div>will insert gallery here (later)</div>
-    <br>
-    <!-- add the delete and update function below -->
-    <div id="" class="card-action">
-        <a id="" href="{% url 'inspirations_update' inspiration.id %}">Edit</a>
-        <a id="" href="{% url 'inspirations_delete' inspiration.id %}">Delete</a>
+
+<h1 class="fw-light text-center">Inspiration Details</h1>
+<hr class="mt-2">
+<br>
+
+    <div class="card mb-5">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                {% for photo in inspiration.photo_set.all %}
+                <img src="{{photo.url}}" class="card-img" alt="no image uploaded yet!">
+                {% endfor %}
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ inspiration.name }}</h5>
+                    <p class="card-text">{{ inspiration.description }}</p>
+                    <p class="card-text"><small class="text-muted">{{ inspiration.link }}</small></p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Insert photo markup below this comment -->
+
 {% for photo in inspiration.photo_set.all %}
-    <img class="responsive-img card-panel" src="{{photo.url}}">
+
 {% empty %}
-    <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+    <div class="card-panel teal-text center-align">Upload photo below</div>
+    <br>
+    <form action="{% url 'add_photo' inspiration.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+        {% csrf_token %}
+        <input type="file" name="photo-file">
+        <br><br>
+        <input type="submit" class="btn cancel_btn" value="Upload Photo">
+    </form>
 {% endfor %}
-<form action="{% url 'add_photo' inspiration.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
-    {% csrf_token %}
-    <input type="file" name="photo-file">
-    <br><br>
-    <input type="submit" class="btn" value="Upload Photo">
-</form>
-</div>
-    
+<br>
+<br>
+<hr class="mt-2">
+
+<a id="" href="{% url 'inspirations_update' inspiration.id %}">
+    <button class="btn cancel_btn" >Edit Inspiration</button>
+</a>
+<br>
+<br>
+<a id="" href="{% url 'inspirations_delete' inspiration.id %}">
+    <button class="btn login_btn">Delete Inspiration</button>
+</a>
+
 
 {% endblock %}
