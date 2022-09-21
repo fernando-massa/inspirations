@@ -26,6 +26,9 @@ urlpatterns = [
     # http://localhost:8000/inspirations/1/delete/
     path('inspirations/<int:pk>/delete/',
         views.InspirationDelete.as_view(), name='inspirations_delete'),
+    
+    # add photo
+    path('inspirations/<int:inspiration_id>/add_photo/', views.add_photo, name='add_photo'),
 
 # ------------------Gallery-------------------------------------------------
     # http://localhost:8000/galleries/
