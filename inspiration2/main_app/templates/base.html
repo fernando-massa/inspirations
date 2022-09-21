@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">
+                <a href="{% url 'home' %}" class="navbar-brand">
                     <img src="https://i.imgur.com/trhIG4h.png" height="35" alt="Inspirations">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -22,14 +22,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
+                        {% if user.is_authenticated %}
                         <a href="{% url 'galleries_index' %}" class="nav-item nav-link">View Galleries</a>
                         <a href="{% url 'galleries_create' %}" class="nav-item nav-link">Add Gallery</a>
                         <a href="{% url 'inspirations_create' %}" class="nav-item nav-link">Add Inspiration</a>
+                        <a href="{% url 'logout' %}" class="nav-item nav-link">Log Out</a>
+                         {% else %} 
                     </div>
                     <div class="navbar-nav ms-auto">
                         <a href="{% url 'login' %}" class="nav-item nav-link">Log In</a>
                         <a href="{% url 'signup' %}" class="nav-item nav-link">Sign Up</a>
-                    </div>
+                         {% endif %} 
                 </div>
             </div>
         </nav>
