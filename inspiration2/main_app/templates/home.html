@@ -1,4 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Welcome to Inspiration App!</h1>
+<div class = "home_header">
+        <h1>inspiration</h1>
+        <div>find what inspires you</div>
+        <div>save it beautifully</div>
+        <a href="{% url 'signup' %}" ><button class = "btn login_btn">Sign Up</button></a>
+        </br></br>
+        <a href="{% url 'login' %}"><button class = "btn login_btn">Sign In</button></a>
+</div>
+<div class="container">
+    <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+            <img src="https://i.imgur.com/J9YuDpX.png" class="gallery__img" alt="Image 1">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="https://i.imgur.com/0ksr1KP.png" class="gallery__img" alt="Image 2">
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+            <img src="https://i.imgur.com/1WxhdbQ.png" class="gallery__img" alt="Image 3">
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+            <img src="https://i.imgur.com/SdS8O4S.png" class="gallery__img" alt="Image 4">
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+            <img src="https://i.imgur.com/5SRUjB1.png" class="gallery__img" alt="Image 5">
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+            <img src="https://i.imgur.com/1X0RL86.png" class="gallery__img" alt="Image 6">
+        </figure>
+    </div>
+</div>
 {% endblock %}
+
