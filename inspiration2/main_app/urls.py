@@ -47,4 +47,9 @@ urlpatterns = [
 
     path('accounts/signup/', views.signup, name='signup'),
 
+# ------------------Notes-------------------------------------------------
+    # http://localhost:8000/inspiration/2/add_note/
+    path('inspirations/<int:inspiration_id>/add_note/', views.add_note, name="add_note"),
 ]
+
+from .forms import NoteForm

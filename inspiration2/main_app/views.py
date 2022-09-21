@@ -5,6 +5,7 @@ import uuid
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
+from .forms import NoteForm
 from django.shortcuts import render, redirect
 from .models import Gallery, Inspiration, Note, Photo
 #from .forms import FeedingForm
@@ -55,10 +56,11 @@ def inspiration_index(request):
 # http://localhost:8000/inspirations/1/
 def inspirations_detail(request, inspiration_id):
     inspiration = Inspiration.objects.get(id=inspiration_id)
+    note_form = NoteForm()
     return render(
         request,
         'inspirations/detail.html',
-        {'inspiration': inspiration}
+        {'inspiration': inspiration, 'note_form': note_form}
     )
 
 
