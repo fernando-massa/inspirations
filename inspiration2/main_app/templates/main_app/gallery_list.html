@@ -6,13 +6,18 @@
 
     {% for gallery in gallery_list %}
         <a href="{% url 'galleries_detail' gallery.id %}">
+            {% empty %}
+                <div class="">
+                    You have not created any Galleries yet.
+                    <br><br>
+                    You may "Add Gallery" from the above nav-bar.
+                </div>
+            {% endfor %}
+
             <div>
                 {{ gallery.name }}
             </br>
                 {{ gallery.description }}
             </div>
-            </div>
-        </a>
-    {% endfor %}
-
+            
 {% endblock %}
