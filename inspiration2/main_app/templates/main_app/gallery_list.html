@@ -1,14 +1,16 @@
+{% extends 'base.html' %}
+
 {% block content %}
 
-    <h1>Gallery List</h1>
+    <h1>My Galleries</h1>
 
     {% for gallery in gallery_list %}
         <a href="{% url 'galleries_detail' gallery.id %}">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">{{ gallery.name }}</span>
-                    <span class="card-title">{{ gallery.description }}</span>
-                </div>
+            <div>
+                {{ gallery.name }}
+            </br>
+                {{ gallery.description }}
+            </div>
             </div>
         </a>
     {% endfor %}
