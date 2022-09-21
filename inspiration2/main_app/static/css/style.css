@@ -81,8 +81,22 @@ body,
         text-align: center;
     }
     /* home page */
+    .home-body{
+        margin: 0;
+		padding: 0;
+		height: 100%;
+		background: #60a3bc !important;
+    }
     .home_header {
         text-align: center;
+        margin-top: 300px;
+    }
+    .home-h1 {
+        font-size: 150px;
+        padding-top: 40px;
+    }
+    .home_btn {
+        margin: 10px;
     }
     .container {
         width: 100%;
@@ -137,3 +151,15 @@ body,
         grid-row-start: 6;
         grid-row-end: 9;
     }
+
+@media only screen and (max-width: 800px) {
+    .home-h1 {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-h1 {
+        font-size: 70px;
+    }
+}
