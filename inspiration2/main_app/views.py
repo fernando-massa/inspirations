@@ -189,14 +189,20 @@ class GalleryDetail(DetailView):
 # http://localhost:8000/galleries/create/
 class GalleryCreate(CreateView):
     model = Gallery
-    fields = '__all__'
+    # fields = '__all__'
+    fields = ['name', 'description']
+    def form_valid(self, form):
+        # Assign the logged in user (self.request.user)
+        form.instance.user = self.request.user  # form.instance is the cat
+        # Let the CreateView do its job as usual
+        return super().form_valid(form)
 
 
 # http://localhost:8000/galleries/1/update/
 class GalleryUpdate(UpdateView):
     model = Gallery
     fields = fields = '__all__'
-
+    
 
 # http://localhost:8000/galleries/1/delete/
 class GalleryDelete(DeleteView):
