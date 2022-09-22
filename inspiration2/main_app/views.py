@@ -5,7 +5,7 @@ import uuid
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
-from .forms import NoteForm
+from .forms import NoteForm, AddGalleriesForm
 from django.shortcuts import render, redirect
 from .models import Gallery, Inspiration, Note, Photo
 #from .forms import FeedingForm
@@ -69,8 +69,19 @@ def inspirations_detail(request, inspiration_id):
 # http://localhost:8000/inspirations/create/
 class InspirationCreate(CreateView): # to add LoginRequiredMixin later
     model = Inspiration
+
+    def post(self,request,*args,**kwargs):
+        print(":postmethod")
+        form = AddGalleriesForm(request.POST)
+        print(request.POST["galleries"])
+        if form.is_valid():
+            print(form)
+            form.instance.user=self.request.user
+            form.save()
+        return HttpResponse("working")
     # fields = '__all__'
-    fields = ['name', 'description', 'link']
+    # form_class = AddGalleriesForm
+    fields = ['name', 'description', 'link', 'galleries']
         # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
 
     def form_valid(self, form):
