@@ -52,7 +52,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ---
 
-
+<details>
 <summary>Wireframe</summary>
 <img src="https://imgur.com/bgMf3wY.png" width="500">
 <img src="https://imgur.com/5uuWlJG.png" width="500">
