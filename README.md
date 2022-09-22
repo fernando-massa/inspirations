@@ -1,8 +1,12 @@
 ![Inspiration App Title](https://imgur.com/doH7LHA.png)
+
 ---
+
 # Inspiration is a Pinterest-inspired app. Users can organize images and links of interest in a visually appealing way.
+
 ---
 ## You can add many inspirations!
+
 ![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
 
 ---
@@ -11,6 +15,23 @@
 
 ![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
 ![Inspiration App Gallery2](https://imgur.com/rknGm26.png)
+
+---
+
+## Technologies Used
+
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/cssref/)
+- [Bootstrap](https://bootstrap.build/app)
+- [Python](https://www.python.org/about/)
+- [JavaScript](https://developer.mozilla.org/en-US/)
+- [Django](https://www.djangoproject.com/start/overview/)
+- [Heroku](https://www.heroku.com/home)
+- [AWS](https://aws.amazon.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Whimsical](https://whimsical.com/)
+- [Imgur](https://imgur.com/)
+
 ---
 
 ![Our Team](https://imgur.com/KNrvJVa.png)
@@ -33,22 +54,6 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 ## ERD / Models
 ![ERD](https://imgur.com/v2jFi85.png)
 ![Relationships](https://imgur.com/HzT0qhU.png)
-
----
-
-## Technologies Used
-
-- [HTML](https://www.w3schools.com/html/)
-- [CSS](https://www.w3schools.com/cssref/)
-- [Bootstrap](https://bootstrap.build/app)
-- [Python](https://www.python.org/about/)
-- [JavaScript](https://developer.mozilla.org/en-US/)
-- [Django](https://www.djangoproject.com/start/overview/)
-- [Heroku](https://www.heroku.com/home)
-- [AWS](https://aws.amazon.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Whimsical](https://whimsical.com/)
-- [Imgur](https://imgur.com/)
 
 ---
 
