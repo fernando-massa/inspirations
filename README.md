@@ -61,9 +61,11 @@ Wireframe
 ---
 
 ## Wins
-- Getting everyone on the same page with working code and Repo.
+- Learning great teamwork practices for pushing and pulling code together
 - Adding Responsive CSS
-- User Auth
+- User Authentication
+- Being able to add an inspiration to a Gallery and display it!
+
 
 ## Hurdles
 - Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
@@ -78,3 +80,4 @@ Wireframe
 - FreeCodeCamp - CSS grid image gallery components
 - Start Bootstrap - Image gallery components
 - Suresh and Rondell - Solving bugs and helping implement features
+- Francis the beautiful cow for helping with Heroku deployment
