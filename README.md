@@ -44,13 +44,11 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ---
 
-<details>
-<summary>## Wireframe</summary>
-<br>
+Wireframe
+
 ![Inspiration App Login Page](https://imgur.com/bgMf3wY.png)
 ![Inspiration App Add Inspiration](https://imgur.com/5uuWlJG.png)
 ![Inspiration App All Galleries](https://imgur.com/eaCIG4Y.png)
-</details>
 
 ---
 
