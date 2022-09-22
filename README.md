@@ -87,6 +87,6 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 - Start Bootstrap - Image gallery components
 - Suresh and Rondell - Solving bugs and helping implement features
 <details>
-<summary> Francis Gacad helping with Heroku deployment </summary>
+<summary> Francis Gacad - Heroku deployment </summary>
 <img src="https://imgur.com/p6bdJEY.png" width="500">
 </details>
