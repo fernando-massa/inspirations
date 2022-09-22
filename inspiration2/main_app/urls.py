@@ -34,7 +34,9 @@ urlpatterns = [
     # http://localhost:8000/galleries/
     path('galleries/', views.GalleryList.as_view(), name='galleries_index'),
     # http://localhost:8000/galleries/1/
-    path('galleries/<int:pk>/', views.GalleryDetail.as_view(), name='galleries_detail'),
+    # path('galleries/<int:pk>/', views.GalleryDetail.as_view(), name='galleries_detail'),
+    path('galleries/<int:pk>/', views.galleryDetail, name='galleries_detail'),
+
     # http://localhost:8000/galleries/create/
     path('galleries/create/', views.GalleryCreate.as_view(), name='galleries_create'),
     # http://localhost:8000/galleries/1/update/
