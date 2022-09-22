@@ -148,6 +148,8 @@ def add_photo(request, inspiration_id):
 # http://localhost:8000/galleries/
 class GalleryList(LoginRequiredMixin,ListView):
     model = Gallery
+    def get_queryset(self):
+        return Gallery.objects.filter(user=self.request.user)
     
 
 # # http://localhost:8000/galleries/1/
