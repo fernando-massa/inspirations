@@ -78,7 +78,8 @@ class InspirationCreate(CreateView): # to add LoginRequiredMixin later
             print(form)
             form.instance.user=self.request.user
             form.save()
-        return HttpResponse("working")
+        # return HttpResponse("working")
+        return super().form_valid(form)
     # fields = '__all__'
     # form_class = AddGalleriesForm
     fields = ['name', 'description', 'link', 'galleries']
