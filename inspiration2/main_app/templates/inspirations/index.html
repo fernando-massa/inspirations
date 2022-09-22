@@ -6,28 +6,21 @@
 
 <div class="container">
     <div class="row text-center text-lg-start">
-        <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="d-block mb-4 h-100">
-        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-        </a>
+    {% for inspiration in inspirations %}
+        {% for photo in inspiration.photo_set.all %}
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="{% url 'detail' inspiration.id %}" class="d-block mb-4 h-100">
+                    <img class="img-fluid rounded mx-auto d-block" src="{{photo.url}}" alt="">
+                </a>
+            </div>
+        {% empty %}
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="{% url 'detail' inspiration.id %}" class="d-block mb-4 h-100">
+                    <img class="img-fluid rounded mx-auto d-block" src="https://i.imgur.com/OA95w1G.png" alt="">
+                </a>
+            </div>
+            {% endfor %}
+    {% endfor %}
     </div>
 </div>
-
-    {% for inspiration in inspirations %}
-        <a href="{% url 'detail' inspiration.id %}">
-                    <div>{{ inspiration.name }}</div>
-                    <div>{{ inspiration.description }}</div>
-                    <!-- <p>{{ inspiration.photo_file }}</p> -->
-                </div>
-            </div>
-        </a>
-        {% for photo in inspiration.photo_set.all %}
-        <img class="responsive-img card-panel" src="{{photo.url}}">
-    {% empty %}
-        <div class="card-panel teal-text center-align">No Photos Uploaded</div>
-    {% endfor %}
-    
-
-    {% endfor %}
-
 {% endblock %}

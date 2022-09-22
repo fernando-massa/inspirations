@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ inspiration.name }}</h5>
                     <p class="card-text">{{ inspiration.description }}</p>
-                    <p class="card-text"><small class="text-muted">{{ inspiration.link }}</small></p>
+                    <p class="card-text"><small class="text-muted"><a href="http://{{ inspiration.link }}">{{ inspiration.link }}</a></small></p>
                 </div>
             </div>
         </div>
@@ -83,6 +83,7 @@
 <a id="" href="{% url 'inspirations_delete' inspiration.id %}">
     <button class="btn login_btn">Delete Inspiration</button>
 </a>
+<br>
 
 
 {% endblock %}
