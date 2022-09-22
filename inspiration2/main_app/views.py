@@ -150,18 +150,15 @@ class GalleryList(LoginRequiredMixin,ListView):
     model = Gallery
     
 
-# http://localhost:8000/galleries/1/
-class GalleryDetail(LoginRequiredMixin,DetailView):
-    model = Gallery
-    result = Gallery.objects.get(id = 1)
-    # result.inspirations.all()
-    result2 = Inspiration.objects.filter(galleries__id = 1)
+# # http://localhost:8000/galleries/1/
+# class GalleryDetail(LoginRequiredMixin,DetailView):
+#     model = Gallery
+#     result = Gallery.objects.get(id = 1)
+#     # result.inspirations.all()
+#     result2 = Inspiration.objects.filter(galleries__id = 1)
     
-    def get_queryset(self):
-        
-        print(self.request)
-        
-        
+   
+@login_required        
 def galleryDetail(request, pk):
     gallery = Gallery.objects.get(id = pk)
     inspirations = Inspiration.objects.filter(galleries__id = pk)
