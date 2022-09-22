@@ -10,7 +10,6 @@ from datetime import date
 class Gallery(models.Model):  # IS A
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -40,6 +39,7 @@ class Inspiration(models.Model):
 
 class Photo(models.Model):
     url = models.CharField(max_length=400)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     inspiration = models.ForeignKey(Inspiration, on_delete=models.CASCADE)
 
     def __str__(self):
