@@ -9,7 +9,7 @@
     {% for gallery in gallery_list %}
         <div class="col-lg-3 col-md-4 col-6">
             <a class="d-block mb-4 h-100" href="{% url 'galleries_detail' gallery.id %}">
-                <div class="card text-center" style="width: 13.5rem;">
+                <div class="card text-center gallery-card">
                     <img class="card-img-top" src="https://i.imgur.com/J9YuDpX.png" alt="Card image cap">
                     <div class="card-body">
                         <div class="card-text">{{ gallery.name }}</div>

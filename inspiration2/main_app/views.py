@@ -181,6 +181,7 @@ def add_photo(request, inspiration_id):
 # http://localhost:8000/galleries/
 class GalleryList(ListView):
     model = Gallery
+    
 
 # http://localhost:8000/galleries/1/
 class GalleryDetail(DetailView):

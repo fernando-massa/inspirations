@@ -199,6 +199,9 @@ a {
 .gallery_detail {
     text-align: center;
 }
+.gallery-card {
+    width: 13.5rem
+}
 
 @media only screen and (max-width: 800px) {
     .home-h1 {
