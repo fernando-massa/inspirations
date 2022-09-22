@@ -11,6 +11,7 @@ Inspiration is a Pinterest-inspired app. Users can organize images and links of 
 | [Fernando Massambani](https://github.com/fernando-massa) | Github Manager | "Owns"/manages the repo and GitHub team workflow (merging pull requests, etc.) |
 | [Brianna Dukes](https://github.com/BDukesuwu) | Documenter | In charge of the README, etc |
 | [Patrick Tien](https://github.com/CPTien) | SCRUM Master | Leader of the Agile processes (User Stories, Stand-Ups, etc.) and manager of Trello. |
+
 ---
 
 ![User Stories](https://imgur.com/A5O2hpU.png)
@@ -23,7 +24,6 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 ![Relationships](https://imgur.com/HzT0qhU.png)
 
 ---
-
 
 ## Technologies Used
 
@@ -57,7 +57,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ## Future features
 
-- [ ] lorum ipsum
+- [ ] The ability to delete or edit a note.
 - [ ] lorum ipsum
 - [ ] lorum ipsum
 
