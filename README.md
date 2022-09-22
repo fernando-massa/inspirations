@@ -6,13 +6,13 @@
 
 ---
 ## You can add many inspirations!
-
+<br><br>
 ![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
 
 ---
 
 ## You can organize your inspirations by adding them into a Gallery.
-
+<br><br>
 ![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
 ![Inspiration App Gallery2](https://imgur.com/rknGm26.png)
 
@@ -86,4 +86,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 - FreeCodeCamp - CSS grid image gallery components
 - Start Bootstrap - Image gallery components
 - Suresh and Rondell - Solving bugs and helping implement features
-- Francis the beautiful cow for helping with Heroku deployment
+<details>
+<summary> Francis Gacad helping with Heroku deployment </summary>
+<img src="https://imgur.com/p6bdJEY.png" width="500">
+</details>
