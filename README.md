@@ -18,22 +18,6 @@
 
 ---
 
-## Technologies Used
-
-- [HTML](https://www.w3schools.com/html/)
-- [CSS](https://www.w3schools.com/cssref/)
-- [Bootstrap](https://bootstrap.build/app)
-- [Python](https://www.python.org/about/)
-- [JavaScript](https://developer.mozilla.org/en-US/)
-- [Django](https://www.djangoproject.com/start/overview/)
-- [Heroku](https://www.heroku.com/home)
-- [AWS](https://aws.amazon.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Whimsical](https://whimsical.com/)
-- [Imgur](https://imgur.com/)
-
----
-
 ![Our Team](https://imgur.com/KNrvJVa.png)
 
 | Developer | Role | Description |
@@ -66,6 +50,22 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ---
 
+## Technologies Used
+
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/cssref/)
+- [Bootstrap](https://bootstrap.build/app)
+- [Python](https://www.python.org/about/)
+- [JavaScript](https://developer.mozilla.org/en-US/)
+- [Django](https://www.djangoproject.com/start/overview/)
+- [Heroku](https://www.heroku.com/home)
+- [AWS](https://aws.amazon.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Whimsical](https://whimsical.com/)
+- [Imgur](https://imgur.com/)
+
+---
+
 ## Wins
 - Learning great teamwork practices for pushing and pulling code together
 - Adding Responsive CSS
@@ -74,8 +74,8 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 
 ## Hurdles
-- Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
 - Being able to add an inspiration to a Gallery and display it.
+- Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
 
 ## Future features
 
