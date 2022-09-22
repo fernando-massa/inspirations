@@ -10,7 +10,7 @@
 ## You can organize your inspirations by adding them into a Gallery.
 
 ![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
-![Inspiration App Gallery2](https://imgur.com/eQTdrVE.png)
+![Inspiration App Gallery2](https://imgur.com/rknGm26.png)
 ---
 
 ![Our Team](https://imgur.com/KNrvJVa.png)
