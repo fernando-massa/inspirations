@@ -24,17 +24,15 @@
                     </a>
                 </div>
                 {% endfor %}
+        {% empty %}
+            <div class="gallery_container">
+                You have not created any Inspirations yet!
+                <br><br>
+                <a href="{% url 'inspirations_create' %}" class="nav-item nav-link">
+                    <button class="btn home_btn">Add Inspiration</button>
+                </a>
+            </div>
         {% endfor %}
-        </div>
-    </div>
-    <div>inspirations that belong to this gallery will go here!!</div>
-    <div>for each inspiration in inspirations... show the following (replace image)</div>
-    <div class="container">
-        <div class="row text-center text-lg-start">
-            <div class="col-lg-3 col-md-4 col-6">
-            <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-            </a>
         </div>
     </div>
     <br>
