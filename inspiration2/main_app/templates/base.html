@@ -24,6 +24,7 @@
                     <div class="navbar-nav">
                         {% if user.is_authenticated %}
                         <a href="{% url 'galleries_index' %}" class="nav-item nav-link">View Galleries</a>
+                        <a href="{% url 'inspirations_index' %}" class="nav-item nav-link">View All Inspirations</a>
                         <a href="{% url 'galleries_create' %}" class="nav-item nav-link">Add Gallery</a>
                         <a href="{% url 'inspirations_create' %}" class="nav-item nav-link">Add Inspiration</a>
                         <a href="{% url 'logout' %}" class="nav-item nav-link">Log Out</a>
