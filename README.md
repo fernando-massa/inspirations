@@ -64,8 +64,6 @@ Wireframe
 ## Future features
 
 - [ ] The ability to delete or edit a note.
-- [ ] lorum ipsum
-- [ ] lorum ipsum
 
 ## Credits
 - Mutiullah Samim - color scheme and login form inspiration
