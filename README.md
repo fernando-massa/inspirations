@@ -69,4 +69,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 - [ ] lorum ipsum
 
 ## Credits
-- lorum ipsum
+- Mutiullah Samim - color scheme and login form inspiration
+- FreeCodeCamp - CSS grid image gallery components
+- Start Bootstrap - Image gallery components
+- Suresh and Rondell - Solving bugs and helping implement features
