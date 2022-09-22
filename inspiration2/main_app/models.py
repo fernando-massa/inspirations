@@ -6,17 +6,19 @@ from datetime import date
 
 # Create your models here please
 
-
 class Gallery(models.Model):  # IS A
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # inspirations = models.ManyToManyField(Inspiration)
 
     def __str__(self):
         return f"{self.name}"
 
     def get_absolute_url(self):
         return reverse('galleries_detail', kwargs={'pk': self.id})
+
+
 
 
 class Inspiration(models.Model):
@@ -35,7 +37,7 @@ class Inspiration(models.Model):
 
     def get_absolute_url(self):
         return reverse('inspirations_detail', kwargs={'pk': self.id})
-
+    
 
 class Photo(models.Model):
     url = models.CharField(max_length=400)

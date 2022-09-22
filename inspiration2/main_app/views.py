@@ -153,7 +153,24 @@ class GalleryList(LoginRequiredMixin,ListView):
 # http://localhost:8000/galleries/1/
 class GalleryDetail(LoginRequiredMixin,DetailView):
     model = Gallery
-
+    result = Gallery.objects.get(id = 1)
+    # result.inspirations.all()
+    result2 = Inspiration.objects.filter(galleries__id = 1)
+    
+    def get_queryset(self):
+        
+        print(self.request)
+        
+        
+def galleryDetail(request, pk):
+    gallery = Gallery.objects.get(id = pk)
+    inspirations = Inspiration.objects.filter(galleries__id = pk)
+    print(gallery)
+    print(inspirations)
+    # return render(request, 'galleries/detail.html')
+    return render(request, 'galleries/detail.html', {'inspiration': inspirations, 'gallery': gallery})
+        
+        
 
 # http://localhost:8000/galleries/create/
 class GalleryCreate(LoginRequiredMixin,CreateView):
