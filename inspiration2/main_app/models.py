@@ -14,7 +14,7 @@ class Gallery(models.Model):  # IS A
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} {self.description}"
+        return f"{self.name}"
 
     def get_absolute_url(self):
         return reverse('galleries_detail', kwargs={'pk': self.id})
