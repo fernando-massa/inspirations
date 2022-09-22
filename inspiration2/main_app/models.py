@@ -41,7 +41,7 @@ class Inspiration(models.Model):
 
 class Photo(models.Model):
     url = models.CharField(max_length=400)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     inspiration = models.ForeignKey(Inspiration, on_delete=models.CASCADE)
 
     def __str__(self):
