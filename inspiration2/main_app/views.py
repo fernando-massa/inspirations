@@ -14,7 +14,7 @@ from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
-# Import the login_required decorator for functions
+# Import the login_required decorator for function-based views
 from django.contrib.auth.decorators import login_required
 # Import the mixin for class-based views
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -148,7 +148,9 @@ def add_photo(request, inspiration_id):
 # http://localhost:8000/galleries/
 class GalleryList(LoginRequiredMixin,ListView):
     model = Gallery
-    
+
+    def get_queryset(self):
+        return Gallery.objects.filter(user=self.request.user)
 
 # # http://localhost:8000/galleries/1/
 # class GalleryDetail(LoginRequiredMixin,DetailView):
@@ -179,11 +181,23 @@ class GalleryCreate(LoginRequiredMixin,CreateView):
         # Let the CreateView do its job as usual
         return super().form_valid(form)
 
+    def get_success_url(self, **kwargs):
+        # self.object.id = 9
+        # http://127.0.0.1:8000/cats/9
+        # path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
+        return reverse('galleries_detail', args=(self.object.id,))
+
 
 # http://localhost:8000/galleries/1/update/
 class GalleryUpdate(LoginRequiredMixin,UpdateView):
     model = Gallery
     fields = fields = '__all__'
+
+    def get_success_url(self, **kwargs):
+        # self.object.id = 9
+        # http://127.0.0.1:8000/cats/9
+        # path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
+        return reverse('galleries_detail', args=(self.object.id,))
     
 
 # http://localhost:8000/galleries/1/delete/
