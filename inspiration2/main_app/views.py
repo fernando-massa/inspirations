@@ -30,6 +30,7 @@ def home(request):
     return render(request, "home.html")
 
 # -----------------Notes---------------------------------------------------
+@login_required
 def add_note(request, inspiration_id):
     # print(request.POST['date'])
     # print(request.POST['meal'])
@@ -45,8 +46,10 @@ def add_note(request, inspiration_id):
 
 # -----------------Inspiration----------------------------------------------
 
+
 # show all the inspirations in the index page
 # http://localhost:8000/inspirations
+@login_required
 def inspiration_index(request):
     inspirations = Inspiration.objects.filter(user=request.user)
     return render(request, 'inspirations/index.html', {'inspirations': inspirations})
@@ -54,6 +57,7 @@ def inspiration_index(request):
 
 # to see the inspiration detail
 # http://localhost:8000/inspirations/1/
+@login_required
 def inspirations_detail(request, inspiration_id):
     inspiration = Inspiration.objects.get(id=inspiration_id)
     note_form = NoteForm()
@@ -67,18 +71,14 @@ def inspirations_detail(request, inspiration_id):
 
 # create inspiration
 # http://localhost:8000/inspirations/create/
-class InspirationCreate(CreateView): # to add LoginRequiredMixin later
+class InspirationCreate(LoginRequiredMixin,CreateView): # to add LoginRequiredMixin later
     model = Inspiration
 
     def post(self,request,*args,**kwargs):
-        print(":postmethod")
         form = AddGalleriesForm(request.POST)
-        print(request.POST["galleries"])
         if form.is_valid():
-            print(form)
             form.instance.user=self.request.user
             form.save()
-        # return HttpResponse("working")
         return super().form_valid(form)
     # fields = '__all__'
     # form_class = AddGalleriesForm
@@ -97,42 +97,9 @@ class InspirationCreate(CreateView): # to add LoginRequiredMixin later
         return reverse('detail', args=(self.object.id,))
 
 
-# # create inspiration
-# # http://localhost:8000/inspirations/create/
-# class InspirationCreate(CreateView): # to add LoginRequiredMixin later
-#     model = Inspiration
-#     # fields = '__all__'
-#     fields = ['name', 'description', 'link', 'photo_file']
-#         # fields should contain gallery later, in html we need to have if else "create gallery first, before creating inspiration"
-
-#     def form_valid(self, form):
-#         photo_file = self.request.FILES.get('photo_file', None)
-
-#         if photo_file:
-#             s3 = boto3.client('s3')
-#             # need a unique "key" for S3 / needs image file extension too
-#             key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
-#             # just in case something goes wrong
-#             try:
-#                 bucket = os.environ['S3_BUCKET']
-#                 s3.upload_fileobj(photo_file, bucket, key)
-#                 # build the full url string
-#                 url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-#                 # we can assign to inspiration_id or inspiration (if you have a inspiration object)
-#             except:
-#                 print('An error occurred uploading file to S3')
-
-#         form.instance.user = self.request.user
-#         form.instance.photo_file = url
-
-#         return super().form_valid(form) 
-
-
-
-
 # update inspiration 
 # http://localhost:8000/inspirations/create/
-class InspirationUpdate(UpdateView): # to add LoginRequiredMixin later
+class InspirationUpdate(LoginRequiredMixin,UpdateView): # to add LoginRequiredMixin later
     model = Inspiration
     # fields = '__all__'
     fields = ['description', 'description', 'link']
@@ -144,7 +111,7 @@ class InspirationUpdate(UpdateView): # to add LoginRequiredMixin later
         return reverse('detail', args=(self.object.id,))
 
 
-class InspirationDelete(DeleteView): # to add LoginRequiredMixin later
+class InspirationDelete(LoginRequiredMixin,DeleteView): # to add LoginRequiredMixin later
     model = Inspiration
     success_url = '/inspirations/'
 
@@ -155,7 +122,7 @@ class InspirationDelete(DeleteView): # to add LoginRequiredMixin later
 #     fields = "__all__"
 
 
-
+@login_required
 def add_photo(request, inspiration_id):
     # photo-file will be the "name" attribute on the <input type="file">
     photo_file = request.FILES.get('photo-file', None)
@@ -179,35 +146,35 @@ def add_photo(request, inspiration_id):
 # -----------------Gallery---------------------------------------------------
 
 # http://localhost:8000/galleries/
-class GalleryList(ListView):
+class GalleryList(LoginRequiredMixin,ListView):
     model = Gallery
     
 
 # http://localhost:8000/galleries/1/
-class GalleryDetail(DetailView):
+class GalleryDetail(LoginRequiredMixin,DetailView):
     model = Gallery
 
 
 # http://localhost:8000/galleries/create/
-class GalleryCreate(CreateView):
+class GalleryCreate(LoginRequiredMixin,CreateView):
     model = Gallery
     # fields = '__all__'
     fields = ['name', 'description']
     def form_valid(self, form):
         # Assign the logged in user (self.request.user)
-        form.instance.user = self.request.user  # form.instance is the cat
+        form.instance.user = self.request.user 
         # Let the CreateView do its job as usual
         return super().form_valid(form)
 
 
 # http://localhost:8000/galleries/1/update/
-class GalleryUpdate(UpdateView):
+class GalleryUpdate(LoginRequiredMixin,UpdateView):
     model = Gallery
     fields = fields = '__all__'
     
 
 # http://localhost:8000/galleries/1/delete/
-class GalleryDelete(DeleteView):
+class GalleryDelete(LoginRequiredMixin,DeleteView):
     model = Gallery
     success_url = '/galleries/'
 
