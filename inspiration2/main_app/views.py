@@ -156,8 +156,7 @@ class GalleryList(LoginRequiredMixin,ListView):
 #     result = Gallery.objects.get(id = 1)
 #     # result.inspirations.all()
 #     result2 = Inspiration.objects.filter(galleries__id = 1)
-    
-   
+
 @login_required        
 def galleryDetail(request, pk):
     gallery = Gallery.objects.get(id = pk)
@@ -165,7 +164,7 @@ def galleryDetail(request, pk):
     print(gallery)
     print(inspirations)
     # return render(request, 'galleries/detail.html')
-    return render(request, 'galleries/detail.html', {'inspiration': inspirations, 'gallery': gallery})
+    return render(request, 'galleries/detail.html', {'inspirations': inspirations, 'gallery': gallery})
         
         
 
