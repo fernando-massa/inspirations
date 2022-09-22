@@ -4,14 +4,14 @@ Inspiration is a Pinterest-inspired app. Users can organize images and links of 
 ---
 You can add many inspirations! Without adding them to a Gallery, they'll all float together
 
-![Inspiration App Title](https://imgur.com/umrXFll)
+![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
 
 You can create many Galleries and add many inspirations to that gallery!
 
-![Inspiration App Title](https://imgur.com/91wg9yo.png)
+![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
 
 ---
-![Inspiration App Title](https://imgur.com/eQTdrVE.png)
+![Inspiration App Gallery2](https://imgur.com/eQTdrVE.png)
 ---
 
 ![Our Team](https://imgur.com/KNrvJVa.png)
