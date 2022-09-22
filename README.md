@@ -29,6 +29,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/cssref/)
+- [Bootstrap](https://bootstrap.build/app)
 - [Python](https://www.python.org/about/)
 - [JavaScript](https://developer.mozilla.org/en-US/)
 - [Django](https://www.djangoproject.com/start/overview/)
