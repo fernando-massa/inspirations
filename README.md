@@ -59,10 +59,6 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 <img src="https://imgur.com/eaCIG4Y.png" width="500">
 </details>
 
-![Inspiration App Login Page](https://imgur.com/bgMf3wY.png)
-![Inspiration App Add Inspiration](https://imgur.com/5uuWlJG.png)
-![Inspiration App All Galleries](https://imgur.com/eaCIG4Y.png)
-
 ---
 
 ## Wins
