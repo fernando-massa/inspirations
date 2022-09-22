@@ -52,8 +52,8 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ---
 
-<Wireframe>
-<summary>Example</summary>
+
+<summary>Wireframe</summary>
 <img src="https://imgur.com/bgMf3wY.png" width="500">
 <img src="https://imgur.com/5uuWlJG.png" width="500">
 <img src="https://imgur.com/eaCIG4Y.png" width="500">
