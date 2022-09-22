@@ -2,11 +2,11 @@
 ---
 Inspiration is a Pinterest-inspired app. Users can organize images and links of interest in a visually appealing way.
 ---
-You can add many inspirations! Without adding them to a Gallery, they'll all float together
+You can add many inspirations!
 
 ![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
 
-You can create many Galleries and add many inspirations to that gallery!
+You can organize your inspirations by adding them into a Gallery.
 
 ![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
 
