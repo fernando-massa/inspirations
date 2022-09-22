@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>My Inspirations</h1>
+
+<h1 class="fw-light text-center">My Inspirations</h1>
+<hr class="mt-2">
+
+<div class="container">
+    <div class="row text-center text-lg-start">
+        <div class="col-lg-3 col-md-4 col-6">
+        <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+        </a>
+    </div>
+</div>
 
     {% for inspiration in inspirations %}
         <a href="{% url 'detail' inspiration.id %}">
-            <div id="" class="card" enctype="multipart/form-data">
-                <div id="" class="card-content">
-                    <span id="" class="card-title">{{ inspiration.name }}</span>
-                    <p>Description: {{ inspiration.description }}</p>
+                    <div>{{ inspiration.name }}</div>
+                    <div>{{ inspiration.description }}</div>
                     <!-- <p>{{ inspiration.photo_file }}</p> -->
                 </div>
             </div>
