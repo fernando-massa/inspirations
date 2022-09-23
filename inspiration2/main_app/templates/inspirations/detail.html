@@ -1,89 +1,63 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1 class="fw-light text-center">Inspiration Details</h1>
-<hr class="mt-2">
-<br>
-
-    <div class="card mb-5">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                {% for photo in inspiration.photo_set.all %}
-                <img src="{{photo.url}}" class="card-img" alt="no image uploaded yet!">
-                {% endfor %}
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{ inspiration.name }}</h5>
-                    <p class="card-text">{{ inspiration.description }}</p>
-                    <p class="card-text"><small class="text-muted"><a href="http://{{ inspiration.link }}">{{ inspiration.link }}</a></small></p>
-                </div>
+<div class="container">
+    <h1 class="my-header">Inspiration Details</h1>
+    <hr class="mt-2">
+    <br>
+    <div class="insp-container">
+        <div class="new-container">
+            {% for photo in inspiration.photo_set.all %}
+                <img src="{{photo.url}}" class="cont-image" alt="no image uploaded yet!">
+            {% endfor %}
+            <div class="insp-body">
+                <h5>{{ inspiration.name }}</h5>
+                <div>{{ inspiration.description }}</div>
+                <a href="http://{{ inspiration.link }}" style="font-size: 14px; color: #f39c12;">{{ inspiration.link }}</a>
             </div>
         </div>
     </div>
+    {% for photo in inspiration.photo_set.all %}
 
-{% for photo in inspiration.photo_set.all %}
-
-{% empty %}
-    <div class="card-panel teal-text center-align">Upload photo below</div>
+    {% empty %}
+        <div class="card-panel teal-text center-align">Upload photo below</div>
+        <br>
+        <form action="{% url 'add_photo' inspiration.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+            {% csrf_token %}
+            <input type="file" name="photo-file">
+            <br><br>
+            <input type="submit" class="btn cancel_btn" value="Upload Photo">
+        </form>
+    {% endfor %}
     <br>
-    <form action="{% url 'add_photo' inspiration.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
-        {% csrf_token %}
-        <input type="file" name="photo-file">
-        <br><br>
-        <input type="submit" class="btn cancel_btn" value="Upload Photo">
-    </form>
-{% endfor %}
-<br>
-<br>
-
-
     <hr>
-<div class="">
-    <form action="{% url 'add_note' inspiration.id %}" method="POST">
-        {% csrf_token %}
-        {{ note_form.as_p }}
-        <input type="submit" class="btn" value="Add Note">
-    </form>
+    <div class="note-container">
+        <form action="{% url 'add_note' inspiration.id %}" method="POST">
+            {% csrf_token %}
+            {{ note_form.as_p }}
+            <input type="submit" class="btn cancel_btn" value="Add Note">
+        </form>
+    </div>
+    <br>
+    <br>
+    {% for note in inspiration.note_set.all %}
+        {{ note.date }}
+        {{ note.note }}
 
-    <table class="">
-        <thead>
-            <hr>
-            <h4> Notes </h4>
-        <tr>
-            <th>Date</th>
-            <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for note in inspiration.note_set.all %}
-            <tr>
-                <td>{{ note.date }}</td>
-                <td>{{ note.note }}</td>
-            </tr>
+    {% empty %}
+        <div>No Notes yet </div>
+    {% endfor %}
 
-            <tr>
-               <!-- <td> <a id="" href="{% url 'inspirations_update' inspiration.id %}">Edit</a> </td>-->
-                <!-- <td> <a id="" href="{% url 'inspirations_delete' inspiration.id %}">Delete</a> </td>-->
-            </tr>
-                {% empty %}
-                    <h5>No Notes yet </h5>
-        {% endfor %}
-        </tbody>
-    </table>
+    <hr class="mt-2">
+
+    <a href="{% url 'inspirations_update' inspiration.id %}">
+        <button class="btn cancel_btn" >Edit Inspiration</button>
+    </a>
+    <br>
+    <br>
+    <a href="{% url 'inspirations_delete' inspiration.id %}">
+        <button class="btn login_btn">Delete Inspiration</button>
+    </a>
+    <br>
 </div>
-
-<hr class="mt-2">
-
-<a id="" href="{% url 'inspirations_update' inspiration.id %}">
-    <button class="btn cancel_btn" >Edit Inspiration</button>
-</a>
-<br>
-<br>
-<a id="" href="{% url 'inspirations_delete' inspiration.id %}">
-    <button class="btn login_btn">Delete Inspiration</button>
-</a>
-<br>
-
 
 {% endblock %}

@@ -2,12 +2,17 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #60a3bc !important;
+    background: #60a3bc;
     box-sizing: border-box;
 }
 a {
     color: black;
     text-decoration: none;
+}
+.my-header {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
 }
 .user_card {
     height: 400px;
@@ -52,25 +57,25 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .login_btn:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
+    box-shadow: none;
+    outline: 0px;
 }
 .login_container {
     padding: 0 2rem;
 }
 .input-group-text {
-    background: #c0392b !important;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0.25rem 0 0 0.25rem !important;
+    background: #c0392b;
+    color: white;
+    border: 0;
+    border-radius: 0.25rem 0 0 0.25rem;
 }
 .input_user,
 .input_pass:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
+    box-shadow: none;
+    outline: 0px;
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #c0392b !important;
+    background-color: #c0392b;
 }
 .signup-form-container{
     position: relative;
@@ -86,7 +91,7 @@ a {
 /* home page */
 .home-body{
     margin-top: 0px;
-    background: #60a3bc !important;
+    background: #60a3bc;
 }
 .home-logo {
     display: block;
@@ -185,7 +190,7 @@ a {
     background-color: #f39c12;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-width: 600px;
+    max-width: 380px;
     margin: 0 auto;
 }
 .cancel_btn {
@@ -195,22 +200,80 @@ a {
     color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.gallery-card {
+    border: solid black;
+}
 /* gallery details */
 .gallery_detail {
     text-align: center;
 }
-.gallery-card {
-    width: 13.5rem
+.note-container {
+    max-width: 300px;
 }
-
+/* impression */
+.new-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 600px;
+}
+.cont-image {
+    max-height: 240px;
+}
+.insp-body{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+input {
+    max-width: 100px;
+}
 @media only screen and (max-width: 800px) {
     .home-h1 {
         font-size: 100px;
     }
+    .new-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    .insp-body{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .my-header {
+        text-align: left;
+    }
     .home-h1 {
         font-size: 70px;
+    }
+    .new-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .my-header {
+        text-align: left;
+    }
+    .new-container {
+        flex-direction: column;
+        max-width: 300px;
+    }
+    .note-container {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .my-header {
+        text-align: left;
+    }
+    .new-container {
+        flex-direction: column;
+        max-width: 200px;
     }
 }
