@@ -1,4 +1,4 @@
-![Inspiration App Title](https://imgur.com/doH7LHA.pngwidth="500")
+![Inspiration App Title](https://imgur.com/doH7LHA.png)
 
 ---
 
@@ -8,15 +8,15 @@
 
 ## You can add many inspirations!
 <br><br>
-![Inspiration App Inspirations](https://imgur.com/umrXFll.pngwidth="500")
+![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
 
 ---
 
 ## You can organize your inspirations by adding them into a Gallery.
 <br><br>
-![Inspiration App Gallery1](https://imgur.com/91wg9yo.pngwidth="500")
+![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
 <br>
-![Inspiration App Gallery2](https://imgur.com/rknGm26.pngwidth="500")
+![Inspiration App Gallery2](https://imgur.com/rknGm26.png)
 
 ---
 
@@ -41,7 +41,7 @@
 ---
 
 ## ERD / Models
-![ERD](https://imgur.com/v2jFi85.pngwidth="500")
+![ERD](https://imgur.com/v2jFi85.png)
 <img src="https://imgur.com/bWGeIBj.png" width="500">
 
 
@@ -95,7 +95,7 @@
 - Suresh and Rondell - Solving bugs and helping implement features
 <details>
 <summary> Francis Gacad - Heroku deployment </summary>
-<img src="https://imgur.com/p6bdJEY.png" width="500">
+<img src="https://imgur.com/p6bdJEY.png" width="300">
 </details>
 
 ---
