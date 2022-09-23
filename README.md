@@ -1,4 +1,4 @@
-![Inspiration App Title](https://imgur.com/doH7LHA.png)
+![Inspiration App Title](https://imgur.com/doH7LHA.pngwidth="500")
 
 ---
 
@@ -8,14 +8,14 @@
 
 ## You can add many inspirations!
 <br><br>
-![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
+![Inspiration App Inspirations](https://imgur.com/umrXFll.pngwidth="500")
 
 ---
 
 ## You can organize your inspirations by adding them into a Gallery.
 <br><br>
-![Inspiration App Gallery1](https://imgur.com/91wg9yo.png)
-![Inspiration App Gallery2](https://imgur.com/rknGm26.png)
+![Inspiration App Gallery1](https://imgur.com/91wg9yo.pngwidth="500")
+![Inspiration App Gallery2](https://imgur.com/rknGm26.pngwidth="500")
 
 ---
 
@@ -31,12 +31,12 @@
 
 ---
 
-![User Stories](https://imgur.com/A5O2hpU.png)
+![User Stories](https://imgur.com/A5O2hpU.pngwidth="500")
 
 ---
 
 ## ERD / Models
-![ERD](https://imgur.com/v2jFi85.png)
+![ERD](https://imgur.com/v2jFi85.pngwidth="500")
 
 ---
 
