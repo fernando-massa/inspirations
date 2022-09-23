@@ -19,7 +19,9 @@
 
 ---
 
-![Our Team](https://imgur.com/KNrvJVa.png)
+<p align="center" width="100%">
+    <img src="https://imgur.com/KNrvJVa.png" alt="Our Team">
+</p>
 
 | Developer | Role | Description |
 | ------ | ------ | ------ |
@@ -31,7 +33,9 @@
 
 ---
 
-![User Stories](https://imgur.com/A5O2hpU.pngwidth="150")
+<p align="center" width="100%">
+    <img src="https://imgur.com/A5O2hpU.pngwidth="150" alt="User Stories">
+</p>
 
 ---
 
