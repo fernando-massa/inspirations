@@ -4,10 +4,10 @@ from .models import Note
 from .models import Inspiration
 from .models import Gallery
 
+
 class CustomMMCF(forms.ModelMultipleChoiceField):
     def label_from_instance(self, gallery):
         return "%s" % gallery.name
-
 
 class AddGalleriesForm(forms.ModelForm):
     class Meta:
