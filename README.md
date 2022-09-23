@@ -5,6 +5,11 @@
 # Inspiration is a Pinterest-inspired app. Users can organize images and links of interest in a visually appealing way.
 
 ---
+
+|[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://github.com/)|
+|---|---|---|
+
+---
 ## You can add many inspirations!
 <br><br>
 ![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
