@@ -38,7 +38,6 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ## ERD / Models
 ![ERD](https://imgur.com/v2jFi85.png)
-![Relationships](https://imgur.com/HzT0qhU.png)
 
 ---
 
