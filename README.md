@@ -19,7 +19,7 @@
 
 ---
 
-<p align="center" width="100%">
+<p align="center" width="400">
     <img src="https://imgur.com/KNrvJVa.png" alt="Our Team">
 </p>
 
@@ -33,8 +33,8 @@
 
 ---
 
-<p align="center" width="100%">
-    <img src="https://imgur.com/A5O2hpU.pngwidth="150" alt="User Stories">
+<p align="center" width="400">
+    <img src="https://imgur.com/A5O2hpU.png" alt="User Stories">
 </p>
 
 ---
