@@ -80,6 +80,7 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ## Hurdles
 - Being able to add an inspiration to a Gallery and display it.
+- Gallery drop-down menu when creating an inspiration. We could not see all available Galleries in the list
 - Setting up a working Repository was a struggle for a while, considering we forgot a key factor; the git.ignore file. Once we added one, things became a lot smoother.
 
 ## Future features
