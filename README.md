@@ -87,6 +87,7 @@
 ## Future features
 
 - [ ] The ability to delete or edit a note.
+- [ ] The first image added to the Gallery should be displayed as the thumbnail for that Gallery.
 
 ## Credits
 - Mutiullah Samim - color scheme and login form inspiration
