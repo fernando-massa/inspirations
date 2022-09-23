@@ -6,7 +6,7 @@
 
 ---
 
-|[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://github.com/)|
+|[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://docs.google.com/presentation/d/1hi6yCpexeiiNKeDX1u-ZwK9r6ZZLTa1S5EaUycihSCo/edit#slide=id.g1567ac0b181_1_16839)|
 |---|---|---|
 
 ---
