@@ -15,6 +15,7 @@
 ## You can organize your inspirations by adding them into a Gallery.
 <br><br>
 ![Inspiration App Gallery1](https://imgur.com/91wg9yo.pngwidth="500")
+<br>
 ![Inspiration App Gallery2](https://imgur.com/rknGm26.pngwidth="500")
 
 ---
@@ -41,6 +42,8 @@
 
 ## ERD / Models
 ![ERD](https://imgur.com/v2jFi85.pngwidth="500")
+<img src="https://imgur.com/bWGeIBj.png" width="500">
+
 
 ---
 
@@ -101,3 +104,8 @@
 ### Now for the exciting part! See the app's planning and deployment for yourself!
 |[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://docs.google.com/presentation/d/1hi6yCpexeiiNKeDX1u-ZwK9r6ZZLTa1S5EaUycihSCo/edit#slide=id.g1567ac0b181_1_16839)|
 |---|---|---|
+---
+![GitHub language count](https://img.shields.io/github/languages/count/{fernando-massa}/{inspirations})
+![GitHub top language](https://img.shields.io/github/languages/top/{username}/{repo-name}?color=pink)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/{fernando-massa}/{inspirations})
+
