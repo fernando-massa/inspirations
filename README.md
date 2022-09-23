@@ -41,8 +41,8 @@
 ---
 
 ## ERD / Models
-![ERD](https://imgur.com/v2jFi85.png)
-<img src="https://imgur.com/bWGeIBj.png" width="500">
+<img width="400" src="https://imgur.com/v2jFi85.png/400">
+<img width="400" src="https://imgur.com/bWGeIBj.png/400">
 
 
 ---
