@@ -32,7 +32,6 @@
 ---
 
 ![User Stories](https://imgur.com/A5O2hpU.png)
-More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 
 ---
 
