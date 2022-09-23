@@ -42,7 +42,7 @@
 
 ## ERD / Models
 <img width="400" src="https://imgur.com/v2jFi85.png/400">
-<img width="400" https://imgur.com/dHaMDLG.png/400">
+<img width="400" src="https://imgur.com/a/WYdtAv7.png/400">
 
 
 ---
