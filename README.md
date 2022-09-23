@@ -104,6 +104,6 @@
 ### Now for the exciting part! See the app's planning and deployment for yourself!
 |[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://docs.google.com/presentation/d/1hi6yCpexeiiNKeDX1u-ZwK9r6ZZLTa1S5EaUycihSCo/edit#slide=id.g1567ac0b181_1_16839)|
 |---|---|---|
----
+
 ![GitHub language count](https://img.shields.io/github/languages/count/fernando-massa/inspirations)
 ![GitHub top language](https://img.shields.io/github/languages/top/fernando-massa/inspirations?color=pink)
