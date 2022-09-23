@@ -31,7 +31,7 @@
 
 ---
 
-![User Stories](https://imgur.com/A5O2hpU.pngwidth="500")
+![User Stories](https://imgur.com/A5O2hpU.pngwidth="150")
 
 ---
 
