@@ -6,10 +6,6 @@
 
 ---
 
-|[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://docs.google.com/presentation/d/1hi6yCpexeiiNKeDX1u-ZwK9r6ZZLTa1S5EaUycihSCo/edit#slide=id.g1567ac0b181_1_16839)|
-|---|---|---|
-
----
 ## You can add many inspirations!
 <br><br>
 ![Inspiration App Inspirations](https://imgur.com/umrXFll.png)
@@ -96,3 +92,10 @@ More details on our [Trello](https://trello.com/b/tNdKNxmT/ronderllers)
 <summary> Francis Gacad - Heroku deployment </summary>
 <img src="https://imgur.com/p6bdJEY.png" width="500">
 </details>
+
+---
+
+# Getting Started!
+### Now for the exciting part! See the app's planning and deployment for yourself!
+|[Deployed App](https://inspiration-ga725.herokuapp.com/)|[Trello Board](https://trello.com/b/tNdKNxmT/ronderllers?filter=alleries+I)|[Pitch-Deck](https://docs.google.com/presentation/d/1hi6yCpexeiiNKeDX1u-ZwK9r6ZZLTa1S5EaUycihSCo/edit#slide=id.g1567ac0b181_1_16839)|
+|---|---|---|
