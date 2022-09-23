@@ -5,19 +5,20 @@
 <div class = "gallery-form-container">
     <h1 class="fw-light text-center">Add/Edit Gallery</h1>
     <hr class="mt-2">
-    <br>
     <div class="d-flex justify-content-center align-content-center">
+        <div class="form_container">
         <form action="" method="POST">
             {% csrf_token %}
-            <table>
-            {{ form.as_table }}
-            </table>
+
+            {{ form.as_p }}
+        
             <br><br>
-            <div class="d-flex justify-content-center login_container">
+            <div class="justify-content-center login_container">
                 <input type="submit" value="Create" class="btn login_btn">
             </div>
             <br>
         </form>
+        </div>
     </div>
 </div>
 

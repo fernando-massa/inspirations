@@ -5,30 +5,33 @@
 <h1 class="fw-light text-center">My Galleries</h1>
 <hr class="mt-2">
 
-<div class="row text-center text-lg-start">
-    {% for gallery in gallery_list %}
-        <div class="col-lg-3 col-md-4 col-6">
-            <a class="d-block mb-4 h-100" href="{% url 'galleries_detail' gallery.id %}">
-                <div class="card text-center gallery-card">
-                    <img class="card-img-top" src="https://i.imgur.com/J9YuDpX.png" alt="Card image cap">
-                    <div class="card-body">
-                        <div class="card-text">{{ gallery.name }}</div>
+<div class="container">
+    <div class="row text-center text-lg-start">
+        <div class = 'card-deck'></div>
+        {% for gallery in gallery_list %}
+            <div class="col-lg-3 col-md-4 col-8">
+                <a class="d-block mb-4 h-100" href="{% url 'galleries_detail' gallery.id %}">
+                    <div class="card text-center" style="height:200px; width: 200px;">
+                        <img class="card-img-top" src="https://i.imgur.com/J9YuDpX.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="card-text">{{ gallery.name }}</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-
-        {% empty %}
-            <div class="gallery_container">
-                You have not created any Galleries yet!
-                <br><br>
-                <a href="{% url 'galleries_create' %}" class="nav-item nav-link">
-                    <button class="btn home_btn">Add Gallery</button>
                 </a>
             </div>
 
-    {% endfor %}
-</div>
+            {% empty %}
+                <div class="gallery_container">
+                    You have not created any Galleries yet!
+                    <br><br>
+                    <a href="{% url 'galleries_create' %}" class="nav-item nav-link">
+                        <button class="btn home_btn">Add Gallery</button>
+                    </a>
+                </div>
 
+        {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
 

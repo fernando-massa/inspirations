@@ -185,7 +185,7 @@ a {
     background-color: #f39c12;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-width: 600px;
+    max-width: 380px;
     margin: 0 auto;
 }
 .cancel_btn {
@@ -195,12 +195,12 @@ a {
     color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.gallery-card {
+    border: solid black;
+}
 /* gallery details */
 .gallery_detail {
     text-align: center;
-}
-.gallery-card {
-    width: 13.5rem
 }
 
 @media only screen and (max-width: 800px) {
