@@ -107,3 +107,4 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/fernando-massa/inspirations)
 ![GitHub top language](https://img.shields.io/github/languages/top/fernando-massa/inspirations?color=pink)
+![GitHub language version](https://img.shields.io/pypi/pyversions/Django)
